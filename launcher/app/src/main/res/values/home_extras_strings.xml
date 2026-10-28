@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Prayer times under the top buttons and the Wi-Fi menu. Prayer names as used in Indonesia. -->
+<resources>
+    <string name="prayer_fajr" translatable="false">Subuh</string>
+    <string name="prayer_dhuhr" translatable="false">Dzuhur</string>
+    <string name="prayer_asr" translatable="false">Ashar</string>
+    <string name="prayer_maghrib" translatable="false">Maghrib</string>
+    <string name="prayer_isha" translatable="false">Isya</string>
+    <!-- Next: Subuh in 2 h 45 min -->
+    <string name="prayer_next" translatable="false">Next: %1$s in %2$s</string>
+    <string name="prayer_hours" translatable="false">%d h</string>
+    <string name="prayer_minutes" translatable="false">%d min</string>
+
+    <string name="wifi_network_settings" translatable="false">Network settings</string>
+    <string name="wifi_signal_strong" translatable="false">Strong</string>
+    <string name="wifi_signal_good" translatable="false">Good</string>
+    <string name="wifi_signal_weak" translatable="false">Weak</string>
+    <string name="wifi_secured" translatable="false">Secured</string>
+    <string name="wifi_open" translatable="false">Open</string>
+
+    <string name="settings_display_sound" translatable="false">Display &amp; sound</string>
+
+    <string name="dream_ambient_name" translatable="false">Panda Home</string>
+    <string name="dream_temp" translatable="false">%d°C</string>
+    <!-- A forecast day's high and low: 29° / 21° -->
+    <string name="dream_high_low" translatable="false">%1$d° / %2$d°</string>
+
+    <string name="np_open" translatable="false">Open the player</string>
+    <string name="np_prev" translatable="false">Previous</string>
+    <string name="np_play_pause" translatable="false">Play or pause</string>
+    <string name="np_next" translatable="false">Next</string>
+    <string name="settings_all" translatable="false">All settings</string>
+</resources>
