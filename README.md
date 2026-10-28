@@ -3,7 +3,7 @@
 Hasil ngulik TV **Polytron PLD-43BAG9953** (based on Android TV 14 dengan RAM 1 GB) lewat ADB dari laptop Windows:
 aplikasi pelacak dan iklan dimatikan, default Homescreen diganti dengan launcher sendiri yang ringan. 
 
-> **Dijamin performa TV meningkat dan gak nge-lag** Daftar paket dan skrip di sini dibuat untuk TV Polytron, tapi seharusnya bisa juga untuk TV yang lain dengan OS Android. Selalu buat backup dulu, dan kerjakan sedikit demi sedikit.
+> **Dijamin performa TV meningkat dan gak nge-lag.** Daftar paket dan skrip ini dibuat untuk TV Polytron, tapi seharusnya bisa juga untuk TV yang lain dengan OS Android. Selalu backup dulu, dan kerjakan sedikit demi sedikit.
 
 ![Screensaver](screenshots/dream-ambient2.png)
 
@@ -12,13 +12,13 @@ aplikasi pelacak dan iklan dimatikan, default Homescreen diganti dengan launcher
 - **Debloat:** 17 paket pelacak, iklan dan aplikasi bawaan yang tidak dipakai dimatikan (disable). Daftar dan alasannya:
   [debloat/debloat.txt](debloat/debloat.txt).
 - **Launcher (Home) baru**, based on [cleanyourtv](https://github.com/Gathin23/cleanyourtv):
-  - jam, tanggal, kalimat sapa dengan nama keluarga, dan cuaca kota di bawah jam (Open-Meteo);
+  - jam, tanggal, kalimat sapa/greetings dengan nama keluarga, dan cuaca kota di bawah jam (Open-Meteo);
   - jadwal sholat Kemenag yang ditampilkan di TV, waktu sholat yang sedang berjalan ditebalkan, plus hitung mundur jadwal
     sholat selanjutnya;
-  - wallpaper lembah yang kalem, menenangkan dan mengikuti cuaca asli (dari [tv-launcher](https://github.com/samipuro/tv-launcher));
+  - wallpaper lembah dan mengikuti cuaca asli (dari [tv-launcher](https://github.com/samipuro/tv-launcher));
   - dock aplikasi, menu turun untuk Inputs, Wi-Fi (daftar jaringan sekitar) dan Settings;
   - kartu **Now Playing** di atas dock saat musik diputar di Spotify, YouTube, dan lain-lain;
-  - **screensaver** dengan lembah yang sama, jam, cuaca dan prediksi cuaca selama 5 hari.
+  - **screensaver** dengan wallpaper lembah, jam, cuaca dan prediksi cuaca selama 5 hari.
 - **Add-on cuaca** layar penuh ([weather-addon](weather-addon)), dari cleanyourtv.
 - **Skrip PowerShell** untuk backup, debloat, restore dan memasang launcher ([scripts](scripts)).
 
@@ -102,7 +102,7 @@ Jalankan `java WallpaperGen.java out`, salin tiap folder hari ke
 | Satu aplikasi | `.\adb shell pm enable <paket>` |
 | Semua yang dimatikan skrip | `powershell -ExecutionPolicy Bypass -File .\restore.ps1` |
 | Paket yang di-uninstall untuk user | `.\adb shell cmd package install-existing <paket>` |
-| Home bawaan | `.\adb shell pm enable com.google.android.tvlauncher`, lalu `.\adb shell cmd package set-home-activity com.google.android.tvlauncher/.MainActivity` |
+| Homescreen default | `.\adb shell pm enable com.google.android.tvlauncher`, lalu `.\adb shell cmd package set-home-activity com.google.android.tvlauncher/.MainActivity` |
 | Screensaver Google | `.\adb shell settings put secure screensaver_components com.google.android.backdrop/.Backdrop` |
 
 ## Catatan dari TV ini
