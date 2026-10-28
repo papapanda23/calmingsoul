@@ -1,0 +1,39 @@
+# Debloat Polytron PLD-43BAG9953 (Android TV 14, HKC/CVTE board, MediaTek)
+# Satu paket per baris. Baris yang diawali # diabaikan oleh skrip.
+#
+# Cara pakai (dari folder scripts, setelah backup):
+#   powershell -ExecutionPolicy Bypass -File .\disable-batch.ps1 <paket1> <paket2> ...
+# Kerjakan sedikit-sedikit, cek TV setelah setiap batch.
+
+# --- Batch 1: pelacak, iklan, umpan balik ------------------------------------------
+tv.anoki.acr.anokiacroptin               # ACR: mengenali tontonan di layar (pelacak)
+com.google.android.feedback              # kirim umpan balik ke Google
+com.android.tv.feedbackconsent           # persetujuan umpan balik
+android.autoinstalls.config.hkc          # memasang aplikasi promosi otomatis
+com.mstar.android.tv.disclaimercustomization  # layar disclaimer pabrik
+com.cvte.tv.cvte_help                    # bantuan pabrik
+fusion.android.tv.demo                   # mode demo toko
+
+# --- Batch 2: aplikasi bawaan yang tidak dipakai -----------------------------------
+com.amazon.amazonvideo.livingroom        # Prime Video
+com.hbo.asia.androidtv                   # HBO GO
+com.molatvbox                            # Mola
+com.catchplay.asiaplay.common.tv         # Catchplay+
+com.internet.tvbrowser                   # browser bawaan
+com.live_streaming_tv.online_tv          # aplikasi live TV promosi
+com.google.android.play.games            # Play Games
+com.google.android.youtube.tvmusic       # YouTube Music
+
+# --- Batch 3: setelah launcher baru jadi Home --------------------------------------
+com.google.android.tvlauncher            # launcher bawaan (pakai -AllowLauncher)
+com.google.android.partnersetup          # setup partner
+
+# --- Dihidupkan lagi oleh sistem TV setiap boot: pakai uninstall untuk user --------
+#   .\adb shell pm uninstall -k --user 0 <paket>
+#   Kembalikan: .\adb shell cmd package install-existing <paket>
+# com.cltv.fast                          # FAST channels (iklan), dihidupkan com.mediatek.tv.service
+# com.google.android.tvrecommendations   # rekomendasi Google TV, dihidupkan factorymanager
+
+# --- JANGAN dimatikan -------------------------------------------------------------
+# com.google.android.backdrop            # screensaver Google; tanpa ini TV langsung tidur setelah 5 menit
+# com.mediatek.*                         # dilindungi skrip, dipakai sistem TV (termasuk partnercustomizer)
