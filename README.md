@@ -1,26 +1,24 @@
-# Polytron TV: debloat dan Home screen sendiri
+# Debloat TV Polytron dan Kustomisasi Homescreen
 
-Oprekan TV **Polytron PLD-43BAG9953** (Android TV 14, board HKC/CVTE, chip MediaTek) lewat ADB dari laptop Windows:
-aplikasi pelacak dan iklan dimatikan, lalu Home bawaan diganti launcher sendiri yang ringan.
+Hasil ngulik TV **Polytron PLD-43BAG9953** (based on Android TV 14 dengan RAM 1 GB) lewat ADB dari laptop Windows:
+aplikasi pelacak dan iklan dimatikan, default Homescreen diganti dengan launcher sendiri yang ringan. 
 
-> **Tanpa garansi, risiko ditanggung sendiri.** Daftar paket dan skrip di sini dibuat untuk TV di atas. Mematikan
-> paket yang salah bisa membuat TV bermasalah. Selalu buat backup dulu, dan kerjakan sedikit demi sedikit.
+> **Dijamin performa TV meningkat dan gak nge-lag** Daftar paket dan skrip di sini dibuat untuk TV Polytron, tapi seharusnya bisa juga untuk TV yang lain dengan OS Android. Selalu buat backup dulu, dan kerjakan sedikit demi sedikit.
 
 ![Screensaver](screenshots/dream-ambient2.png)
 
 ## Isinya
 
-- **Debloat:** 17 paket pelacak, iklan dan aplikasi bawaan yang tidak dipakai dimatikan (bukan dihapus), plus 2 paket
-  yang dihidupkan lagi oleh sistem setiap boot sehingga di-uninstall untuk user. Daftar dan alasannya:
+- **Debloat:** 17 paket pelacak, iklan dan aplikasi bawaan yang tidak dipakai dimatikan (disable). Daftar dan alasannya:
   [debloat/debloat.txt](debloat/debloat.txt).
-- **Launcher (Home) baru**, turunan [cleanyourtv](https://github.com/Gathin23/cleanyourtv):
-  - jam, tanggal, sapaan dengan nama keluarga, dan cuaca kota di bawah jam (Open-Meteo, tanpa akun);
-  - jadwal sholat Kemenag yang dihitung di TV, waktu sholat yang sedang berjalan ditebalkan, plus hitung mundur
-    "Next: Dzuhur in 2 h 45 min";
-  - wallpaper lembah yang mengikuti matahari dan cuaca asli (dari [tv-launcher](https://github.com/samipuro/tv-launcher));
+- **Launcher (Home) baru**, based on [cleanyourtv](https://github.com/Gathin23/cleanyourtv):
+  - jam, tanggal, kalimat sapa dengan nama keluarga, dan cuaca kota di bawah jam (Open-Meteo);
+  - jadwal sholat Kemenag yang ditampilkan di TV, waktu sholat yang sedang berjalan ditebalkan, plus hitung mundur jadwal
+    sholat selanjutnya;
+  - wallpaper lembah yang kalem, menenangkan dan mengikuti cuaca asli (dari [tv-launcher](https://github.com/samipuro/tv-launcher));
   - dock aplikasi, menu turun untuk Inputs, Wi-Fi (daftar jaringan sekitar) dan Settings;
   - kartu **Now Playing** di atas dock saat musik diputar di Spotify, YouTube, dan lain-lain;
-  - **screensaver** dengan lembah yang sama, jam, cuaca dan ramalan 5 hari.
+  - **screensaver** dengan lembah yang sama, jam, cuaca dan prediksi cuaca selama 5 hari.
 - **Add-on cuaca** layar penuh ([weather-addon](weather-addon)), dari cleanyourtv.
 - **Skrip PowerShell** untuk backup, debloat, restore dan memasang launcher ([scripts](scripts)).
 
@@ -84,7 +82,7 @@ Yang paling sering diubah:
 
 | Pilihan | Isi |
 |---|---|
-| `latitude`, `longitude`, `weather_city` | lokasi untuk cuaca, jadwal sholat dan matahari (bawaan: Malang) |
+| `latitude`, `longitude`, `weather_city` | lokasi untuk cuaca, jadwal sholat dan cuaca (default city: Malang) |
 | `greeting_name` | nama setelah sapaan, misalnya "Good Morning, Panda Family" |
 | `dock_apps` | aplikasi di dock, urut dari kiri |
 | `dock_scale` | ukuran dock dalam persen (bawaan 85) |
